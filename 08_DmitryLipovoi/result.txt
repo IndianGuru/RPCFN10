@@ -1,0 +1,6 @@
+Loaded suite save_unit_test_result
+Started
+.........
+Finished in 0.046875 seconds.
+
+9 tests, 10 assertions, 0 failures, 0 errors, 0 skips
