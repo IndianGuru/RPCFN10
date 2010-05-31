@@ -1,0 +1,5 @@
+*Ryan Bates* has been involved in web development since 1998. In 2005 he started working professionally with Ruby and Rails and is now best known for his work on Railscasts, the free Ruby on Rails screencast series.
+
+Ryan has this to say about the challenge:
+
+bq. Sometimes when working in a structured framework environment such as Rails it is easy to forget about the fundamentals of Ruby and how to organize code. The majority of this challenge could be done in one large method, but I encourage you to focus on readability through refactoring. This challenge also exercises working with times and iterations.

@@ -1,0 +1,26 @@
+h1. Business Hours
+
+Chunky Bacon Begone is a dry-cleaning company known for its speedy service. It guarantees to dry-clean anything within two business hours or less. The problem is, when the customer drops off the clothes, he needs to know what time they are guaranteed to be done.
+
+It is your job to write a Ruby script which will determine the guaranteed time given a business hour schedule. You must create a class called @BusinessHours@ which allows one to define the opening and closing time for each day. It should provide the following interface.
+
+<pre>
+hours = BusinessHours.new("9:00 AM", "3:00 PM")
+hours.update :fri, "10:00 AM", "5:00 PM"
+hours.update "Dec 24, 2010", "8:00 AM", "1:00 PM"
+hours.closed :sun, :wed, "Dec 25, 2010"
+</pre>
+
+The @update@ method should change the opening and closing time for a given day. The @closed@ method should specify which days the shop is not open. Notice days can either be a symbol for week days or a string for specific dates. Any given day can only have one opening time and one closing time -- here are no off-hours in the middle of the day.
+
+A method called @calculate_deadline@ should determine the resulting business time given a time interval (in seconds) along with a starting time (as a string). The returned object should be an instance of @Time@. Here are some examples.
+
+<pre>
+hours.calculate_deadline(2*60*60, "Jun 7, 2010 9:10 AM") # => Mon Jun 07 11:10:00 2010
+hours.calculate_deadline(15*60, "Jun 8, 2010 2:48 PM") # => Thu Jun 10 09:03:00 2010
+hours.calculate_deadline(7*60*60, "Dec 24, 2010 6:45 AM") # => Mon Dec 27 11:00:00 2010
+</pre>
+
+Notice it is possible for multiple days to be skipped, and the starting time can be before opening or after closing.
+
+Tip: Use @Time.parse@ to generate a Time from a string. You may need to @require "time"@ in order to do this.

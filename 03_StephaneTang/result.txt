@@ -1,0 +1,11 @@
+Loaded suite auto_test
+Started
+......F..
+Finished in 0.640625 seconds.
+
+  1) Failure:
+test_start_next_day_when_after_closing_time(BusinessHoursTest) [D:/ruby/RPCFN/challenge10/test_tool/business_hours/business_hours_test.rb:18]:
+<2009-12-21 08:05:00 +0900> expected but was
+<2009-12-20 08:05:00 +0900>.
+
+9 tests, 10 assertions, 1 failures, 0 errors, 0 skips

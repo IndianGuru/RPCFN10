@@ -1,0 +1,16 @@
+Loaded suite auto_test
+Started
+.FF......
+Finished in 0.000000 seconds.
+
+  1) Failure:
+test_change_hours_for_specific_dates(BusinessHoursTest) [D:/ruby/RPCFN/challenge10/test_tool/business_hours/business_hours_test.rb:47]:
+<2009-12-28 08:02:00 +0900> expected but was
+<2009-12-26 08:02:00 +0900>.
+
+  2) Failure:
+test_skip_closed_days(BusinessHoursTest) [D:/ruby/RPCFN/challenge10/test_tool/business_hours/business_hours_test.rb:41]:
+<2009-12-21 08:02:00 +0900> expected but was
+<2009-12-19 08:02:00 +0900>.
+
+9 tests, 9 assertions, 2 failures, 0 errors, 0 skips
