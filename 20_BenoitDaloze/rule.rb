@@ -1,4 +1,5 @@
 class Rule
+  attr_reader :opening, :closing
   def initialize(opening, closing)
     @opening, @closing = BusinessHours.parse_hour(opening), BusinessHours.parse_hour(closing)
   end

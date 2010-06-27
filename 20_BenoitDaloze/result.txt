@@ -1,20 +1,16 @@
-# written by ashbb
-
-Umm... I ran this test snippet (just 4 lines) and got the below outputs.
-
-	require 'business_hours'
-	@hours = BusinessHours.new("8:00 AM", "5:00 PM")
-	p @hours
-	p @hours.calculate_deadline(5*60, "Dec 21, 2009 3:00 PM")
-
-
-Output is:
-
->ruby test.rb
-#<BusinessHours:0xf02318 @rules=[], @base_rule=#<Rule:0xf022e0 @opening=(8/1), @closing=(17/1)>>
-C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/20_BenoitDaloze/business_hours.rb:34:in `each': undefined method `<=>' for nil:NilClass (NoMethodError)
-	from C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/20_BenoitDaloze/business_hours.rb:34:in `max'
-	from C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/20_BenoitDaloze/business_hours.rb:34:in `calculate_deadline'
-	from test.rb:7:in `<main>'
->Exit code: 1
-
+Loaded suite save_unit_test_result
+Started
+.....FF..
+Finished in 0.156250 seconds.
+
+  1) Failure:
+test_start_at_opening_time(BusinessHoursTest) [C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/test_tool/business_hours/business_hours_test.rb:14]:
+<2009-12-21 08:05:00 +0900> expected but was
+<2009-12-21 07:32:00 +0900>.
+
+  2) Failure:
+test_start_next_day_when_after_closing_time(BusinessHoursTest) [C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/test_tool/business_hours/business_hours_test.rb:18]:
+<2009-12-21 08:05:00 +0900> expected but was
+<2009-12-21 09:42:00 +0900>.
+
+9 tests, 10 assertions, 2 failures, 0 errors, 0 skips

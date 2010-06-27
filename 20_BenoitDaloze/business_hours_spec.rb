@@ -21,6 +21,13 @@ describe BusinessHours do
     hours.work_time(Time.parse("Sun Jun 13, 2010")).should == (0..0)
   end
 
+  it "init test" do
+    hours = BusinessHours.new("8:00 AM", "5:20 PM")
+    hours.base_rule.opening.should == 8
+    hours.base_rule.closing.should == 17+Rational(20,60)
+    hours.calculate_deadline(   5*60, "Dec 21, 2009 3:00 PM").should == Time.parse("Mon Dec 21 15:05:00 2009")
+  end
+
   it "basic test" do
     hours.calculate_deadline(2*60*60, "Jun  7, 2010 9:10 AM").should == Time.parse("Mon Jun 07 11:10:00 2010")
   end

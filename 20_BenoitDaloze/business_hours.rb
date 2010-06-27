@@ -1,9 +1,8 @@
 require "time"
-#Dir[File.expand_path("../*.rb", __FILE__)].each { |f| require f unless f == __FILE__ }
-Dir[File.expand_path("lib/*.rb")].each { |f| require f }
-
+Dir[File.expand_path("../*.rb", __FILE__)].each { |f| require f unless (f == __FILE__  or f =~ /.*_spec.rb$/)} # added a bit for unit test by ashbb
 
 class BusinessHours
+  attr_reader :base_rule, :rules
   NO_DAY = TimeRange.new(0..0)
   ALL_DAY = TimeRange.new(0..24)
 
@@ -44,7 +43,7 @@ class BusinessHours
 
   def work_time(day)
     work_time = @rules.map { |rule| rule.time_range(day) }.reduce(:&)
-    work_time = @base_rule.time_range(day) if work_time == ALL_DAY
+    work_time = @base_rule.time_range(day) if work_time.nil? or work_time == ALL_DAY
     work_time
   end
 
