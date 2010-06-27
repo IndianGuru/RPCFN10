@@ -132,7 +132,16 @@ class BusinessHours
     available_seconds = if every_day_closed?
       @dates.inject(0) do |total, (day, hours)|
         if !hours[:closed] && day >= date
-          total + (Time.parse(hours[:closing]) - Time.parse(hours[:opening]))
+
+          # If this date is the start, calculate how long is left
+          # from the start time otherwise use the default opening hours.
+          opening = if day == date
+            parsed_time
+          else
+            Time.parse(hours[:opening])
+          end
+
+          total + (Time.parse(hours[:closing]) - opening)
         else
           total
         end
