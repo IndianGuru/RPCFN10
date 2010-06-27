@@ -1,0 +1,87 @@
+Loaded suite save_unit_test_result
+Started
+Job Length:300
+Job Start:2009-12-21 16:57:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+Job Length:120.0
+Job Start:2009-12-22 00:00:00 +0900
+Job Day:2009-12-22 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.Job Length:300
+Job Start:2009-12-24 14:57:00 +0900
+Job Day:2009-12-24 00:00:00 +0900
+Hours:{:start_time=>28800.0, :end_time=>54000.0}
+Job Length:120.0
+Job Start:2009-12-25 00:00:00 +0900
+Job Day:2009-12-25 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+FJob Length:300
+Job Start:2009-12-18 16:57:00 +0900
+Job Day:2009-12-18 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+Job Length:120.0
+Job Start:2009-12-19 00:00:00 +0900
+Job Day:2009-12-19 00:00:00 +0900
+Hours:{}
+Job Length:120.0
+Job Start:2009-12-20 00:00:00 +0900
+Job Day:2009-12-20 00:00:00 +0900
+Hours:{}
+Job Length:120.0
+Job Start:2009-12-21 00:00:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.Job Length:36000
+Job Start:2009-12-21 07:57:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+Job Length:3600
+Job Start:2009-12-22 00:00:00 +0900
+Job Day:2009-12-22 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.Job Length:36000
+Job Start:2009-12-21 16:57:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+Job Length:35820.0
+Job Start:2009-12-22 00:00:00 +0900
+Job Day:2009-12-22 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+Job Length:3420.0
+Job Start:2009-12-23 00:00:00 +0900
+Job Day:2009-12-23 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.Job Length:300
+Job Start:2009-12-21 07:27:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.Job Length:300
+Job Start:2009-12-20 18:37:00 +0900
+Job Day:2009-12-20 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+Job Length:300
+Job Start:2009-12-21 00:00:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.Job Length:300
+Job Start:2009-12-21 14:57:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>54000}
+Job Length:120.0
+Job Start:2009-12-22 00:00:00 +0900
+Job Day:2009-12-22 00:00:00 +0900
+Hours:{:start_time=>32400, :end_time=>61200}
+.Job Length:300
+Job Start:2009-12-21 15:00:00 +0900
+Job Day:2009-12-21 00:00:00 +0900
+Hours:{:start_time=>28800, :end_time=>61200}
+.
+Finished in 0.062500 seconds.
+
+  1) Failure:
+test_change_hours_for_specific_dates(BusinessHoursTest) [C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/test_tool/business_hours/business_hours_test.rb:47]:
+<2009-12-28 08:02:00 +0900> expected but was
+<2009-12-25 08:02:00 +0900>.
+
+9 tests, 9 assertions, 1 failures, 0 errors, 0 skips

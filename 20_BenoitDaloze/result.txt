@@ -1,0 +1,20 @@
+# written by ashbb
+
+Umm... I ran this test snippet (just 4 lines) and got the below outputs.
+
+	require 'business_hours'
+	@hours = BusinessHours.new("8:00 AM", "5:00 PM")
+	p @hours
+	p @hours.calculate_deadline(5*60, "Dec 21, 2009 3:00 PM")
+
+
+Output is:
+
+>ruby test.rb
+#<BusinessHours:0xf02318 @rules=[], @base_rule=#<Rule:0xf022e0 @opening=(8/1), @closing=(17/1)>>
+C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/20_BenoitDaloze/business_hours.rb:34:in `each': undefined method `<=>' for nil:NilClass (NoMethodError)
+	from C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/20_BenoitDaloze/business_hours.rb:34:in `max'
+	from C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/20_BenoitDaloze/business_hours.rb:34:in `calculate_deadline'
+	from test.rb:7:in `<main>'
+>Exit code: 1
+

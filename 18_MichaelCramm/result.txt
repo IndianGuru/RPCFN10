@@ -1,0 +1,51 @@
+Loaded suite save_unit_test_result
+Started
+FFFFFFFFF
+Finished in 0.671875 seconds.
+
+  1) Failure:
+test_carry_over_remaining_time_onto_next_day(BusinessHoursTest) [./business_hours_test.rb:22]:
+<Tue Dec 22 08:02:00 +0900 2009> expected but was
+<Sun Jun 27 08:05:00 +0900 2010>.
+
+  2) Failure:
+test_change_hours_for_specific_dates(BusinessHoursTest) [./business_hours_test.rb:47]:
+<Mon Dec 28 08:02:00 +0900 2009> expected but was
+<"Couldn't finish safely">.
+
+  3) Failure:
+test_skip_closed_days(BusinessHoursTest) [./business_hours_test.rb:41]:
+<Mon Dec 21 08:02:00 +0900 2009> expected but was
+<Sun Jun 27 08:05:00 +0900 2010>.
+
+  4) Failure:
+test_skip_current_day_before_opening(BusinessHoursTest) [./business_hours_test.rb:30]:
+<Tue Dec 22 09:00:00 +0900 2009> expected but was
+<"Couldn't finish safely">.
+
+  5) Failure:
+test_skip_full_day(BusinessHoursTest) [./business_hours_test.rb:26]:
+<Wed Dec 23 08:57:00 +0900 2009> expected but was
+<"Couldn't finish safely">.
+
+  6) Failure:
+test_start_at_opening_time(BusinessHoursTest) [./business_hours_test.rb:14]:
+<Mon Dec 21 08:05:00 +0900 2009> expected but was
+<Sun Jun 27 08:05:00 +0900 2010>.
+
+  7) Failure:
+test_start_next_day_when_after_closing_time(BusinessHoursTest) [./business_hours_test.rb:18]:
+<Mon Dec 21 08:05:00 +0900 2009> expected but was
+<Sun Jun 27 08:05:00 +0900 2010>.
+
+  8) Failure:
+test_update_week_day_hours(BusinessHoursTest) [./business_hours_test.rb:36]:
+<Tue Dec 22 09:02:00 +0900 2009> expected but was
+<Sun Jun 27 08:05:00 +0900 2010>.
+
+  9) Failure:
+test_within_working_hours(BusinessHoursTest) [./business_hours_test.rb:10]:
+<Mon Dec 21 15:05:00 +0900 2009> expected but was
+<Sun Jun 27 08:05:00 +0900 2010>.
+
+9 tests, 9 assertions, 9 failures, 0 errors

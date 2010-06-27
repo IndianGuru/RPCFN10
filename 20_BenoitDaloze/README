@@ -1,0 +1,7 @@
+RPCFN #10: Business Hours
+Benoit Daloze
+
+Compatible with 1.8 and 1.9
+
+Need rspec2 (gem install rspec --pre) for the spec
+Run the specs with `rspec .`

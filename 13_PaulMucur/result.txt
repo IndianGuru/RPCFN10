@@ -1,0 +1,11 @@
+Loaded suite save_unit_test_result
+Started
+.....F...
+Finished in 0.015625 seconds.
+
+  1) Failure:
+test_start_at_opening_time(BusinessHoursTest) [C:/rubyprograms/RPCFN/Ryan_Bates/RPCFN10/test_tool/business_hours/business_hours_test.rb:14]:
+<2009-12-21 08:05:00 +0900> expected but was
+<2009-12-21 07:32:00 +0900>.
+
+9 tests, 10 assertions, 1 failures, 0 errors, 0 skips
