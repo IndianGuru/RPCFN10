@@ -1,5 +1,5 @@
 require "time"
-Dir[File.expand_path("../*.rb", __FILE__)].each { |f| require f unless (f == __FILE__  or f =~ /.*_spec.rb$/)} # added a bit for unit test by ashbb
+Dir[File.expand_path("../*.rb", __FILE__)].each { |f| require f unless File.identical?(f, __FILE__) or f =~ /.*_spec\.rb$/ } # added a bit for unit test by ashbb
 
 class BusinessHours
   attr_reader :base_rule, :rules
@@ -30,7 +30,12 @@ class BusinessHours
     start_time, duration = Time.parse(start_time), Rational(duration, HOUR)
 
     open, close = work_time(start_time).to_a
-    today_work = close - [BusinessHours.parse_hour(start_time), open].max
+
+    # if start_time is out of opening hours
+    open = [[BusinessHours.parse_hour(start_time), open].max, close].min
+    start_time = start_time.beginning_of_day + open*HOUR
+
+    today_work = close - open
     until today_work >= duration
       duration -= today_work
 
